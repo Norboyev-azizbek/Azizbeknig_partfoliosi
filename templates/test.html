@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="/">LOGO</a>
+        <ul>
+            <li><a href="/">Bosh sahifa</a></li>
+            <li><a href="/test/">TEST</a></li>
+        </ul>
+    </nav>
+
+    <div style="padding: 100px; text-align: center; background: #111; margin: 50px; border-radius: 20px;">
+        <h1 style="color: orange; font-size: 3rem;">SALOM DUNYO!</h1>
+        <p style="color: white; font-size: 1.5rem;">Agar buni ko'rsangiz, sayt ishlayapti!</p>
+        <p style="color: #aaa; margin-top: 20px;">Muammo boshqa fayllarda</p>
+    </div>
+
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

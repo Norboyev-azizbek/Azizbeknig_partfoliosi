@@ -1,0 +1,185 @@
+{% load static %}
+
+<section class="hero-section">
+    <div class="hero-text">
+        <h2 class="welcome-msg">Xush kelibsiz!</h2>
+        <h1 class="main-name">Men <span>Azizbek</span></h1>
+        <p class="job-title">
+            <span class="typing-text"></span>
+            <span class="typing-cursor">|</span>
+        </p>
+        <p class="description">
+            Men zamonaviy va tezkor web ilovalar yarataman. Sizning g'oyalaringizni 
+            raqamli reallikka aylantiraman.
+        </p>
+        <div class="hero-btns">
+            <a href="{% url 'projects' %}" class="btn-main">Loyihalarni ko'rish</a>
+            <a href="{% url 'contact' %}" class="btn-outline">Men bilan bog'lanish</a>
+            <a href="{% static 'cv.pdf' %}" class="btn-cv" download>
+                📄 CV yuklab olish
+            </a>
+        </div>
+        <!-- Quick Stats -->
+        <div class="quick-stats">
+            <div class="quick-stat">
+                <span class="stat-number counter" data-target="3">0</span>+
+                <span class="stat-label">Loyihalar</span>
+            </div>
+            <div class="quick-stat">
+                <span class="stat-number counter" data-target="2">0</span>+
+                <span class="stat-label">Yillik tajriba</span>
+            </div>
+            <div class="quick-stat">
+                <span class="stat-number counter" data-target="100">0</span>%
+                <span class="stat-label">Sifat</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="{% static 'logo2.png' %}" alt="Hero Image" class="floating-img">
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills-section">
+    <div class="section-title">
+        <h2>Mening <span>Ko'nikmalarim</span></h2>
+        <p>Har bir texnologiya bo'yicha malaka darajam</p>
+    </div>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-info">
+                <span>HTML5</span>
+                <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="95" style="background: linear-gradient(90deg, #E44D26, #F16529)"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-info">
+                <span>CSS3</span>
+                <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="90" style="background: linear-gradient(90deg, #264DE4, #2965F1)"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-info">
+                <span>JavaScript</span>
+                <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="85" style="background: linear-gradient(90deg, #F7DF1E, #F0DB4F)"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-info">
+                <span>Python</span>
+                <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="80" style="background: linear-gradient(90deg, #3776AB, #FFD43B)"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-info">
+                <span>Django</span>
+                <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="75" style="background: linear-gradient(90deg, #092E20, #44B78B)"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-info">
+                <span>React</span>
+                <span class="skill-percent">70%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" data-width="70" style="background: linear-gradient(90deg, #61DAFB, #00D8FF)"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certificates Section -->
+<section class="certificates-section">
+    <div class="section-title">
+        <h2>Mening <span>Sertifikatlarim</span></h2>
+        <p>Rasmiy tan olingan malaka sertifikatlari</p>
+    </div>
+    <div class="certificates-grid">
+        <div class="certificate-card">
+            <div class="certificate-image">
+                <img src="{% static 'certificates/python.jpg' %}" alt="Python Certificate">
+            </div>
+            <div class="certificate-info">
+                <h3>🏅 Python Programming</h3>
+                <p>Advanced Python Development</p>
+                <span class="cert-date">2023</span>
+            </div>
+        </div>
+        <div class="certificate-card">
+            <div class="certificate-image">
+                <img src="{% static 'certificates/frontend.jpg' %}" alt="Frontend Certificate">
+            </div>
+            <div class="certificate-info">
+                <h3>🏅 Frontend Development</h3>
+                <p>HTML, CSS & JavaScript</p>
+                <span class="cert-date">2023</span>
+            </div>
+        </div>
+        <div class="certificate-card">
+            <div class="certificate-image">
+                <img src="{% static 'certificates/django.jpg' %}" alt="Django Certificate">
+            </div>
+            <div class="certificate-info">
+                <h3>🏅 Django Framework</h3>
+                <p>Web Development with Django</p>
+                <span class="cert-date">2024</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="section-title">
+        <h2>Mijozlar <span>Fikrlari</span></h2>
+        <p>Hamkorlarim va mijozlarimning baholari</p>
+    </div>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+                "Azizbek juda professional dasturchi. Loyihamizni vaqtida va juda sifatli qilib topshirdi."
+            </p>
+            <div class="testimonial-author">
+                <strong>Ali Valiyev</strong>
+                <span>Startup Founder</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+                "Zamonaviy va tezkor sayt yaratib berdi. Juda mamnunman!"
+            </p>
+            <div class="testimonial-author">
+                <strong>Dilnoza Karimova</strong>
+                <span>Business Owner</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+                "Eng yaxshi full-stack dasturchilardan biri. Tavsiya qilaman!"
+            </p>
+            <div class="testimonial-author">
+                <strong>Javohir Sobirov</strong>
+                <span>Project Manager</span>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Azizbek - Full-Stack Dasturchi va Grafik Dizayner. Zamonaviy veb-saytlar va kreativ raqamli yechimlar.">
+    <meta name="keywords" content="dasturchi, web dasturchi, full stack, python, django, portfolio">
+    <meta name="author" content="Azizbek">
+    <meta name="theme-color" content="#FFA500">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% block og_title %}Azizbek - Portfolio{% endblock og_title %}">
+    <meta property="og:description" content="Full-Stack Dasturchi & Grafik Dizayner">
+    <meta property="og:image" content="{% static 'logo2.png' %}">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}Azizbek - Portfolio{% endblock twitter_title %}">
+    <meta name="twitter:description" content="Full-Stack Dasturchi & Grafik Dizayner">
+    <meta name="twitter:image" content="{% static 'logo2.png' %}">
+    
+    <title>{% block title %}Azizbek - Portfolio{% endblock title %}</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}?v=2">
+    <link rel="apple-touch-icon" href="{% static 'logo.png' %}">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+    <!-- Navigation (FAQAT BIR MARTA) -->
+    <nav>
+        <a href="{% url 'index' %}" aria-label="Bosh sahifa">
+            <img src="{% static 'logo.png' %}" alt="Logo" class="logo">
+        </a>
+        <div>
+            <ul>
+                <li><a href="{% url 'index' %}" {% if request.path == '/' %}class="active"{% endif %}>🏠 Bosh sahifa</a></li>
+                <li><a href="{% url 'about' %}" {% if '/about' in request.path %}class="active"{% endif %}>👤 Men haqimda</a></li>
+                <li><a href="{% url 'projects' %}" {% if '/projects' in request.path %}class="active"{% endif %}>💻 Loyihalarim</a></li>
+                <li><a href="{% url 'contact' %}" {% if '/contact' in request.path %}class="active"{% endif %}>📞 Aloqa</a></li>
+            </ul>
+        </div>
+        <div class="search-container">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="search" placeholder="Qidirish... (Ctrl+K)" aria-label="Qidirish">
+            </div>
+            <button class="search-btn">Qidirish</button>
+        </div>
+        <button class="menu-btn" aria-label="Menyu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <!-- Footer (FAQAT BIR MARTA) -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="{% static 'logo.png' %}" alt="Logo" class="footer-logo">
+                <p class="footer-tagline">Zamonaviy yechimlar va kreativ dizayn.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Sahifalar</h4>
+                <ul>
+                    <li><a href="{% url 'index' %}">Bosh sahifa</a></li>
+                    <li><a href="{% url 'about' %}">Men haqimda</a></li>
+                    <li><a href="{% url 'projects' %}">Loyihalarim</a></li>
+                    <li><a href="{% url 'contact' %}">Aloqa</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Ijtimoiy tarmoqlar</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Telegram">Telegram</a>
+                    <a href="#" class="social-icon" aria-label="Instagram">Instagram</a>
+                    <a href="#" class="social-icon" aria-label="GitHub">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Azizbek. Barcha huquqlar himoyalangan.</p>
+            <p>Bu portfolio 4.08.2024 sanasida yaratilgan</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

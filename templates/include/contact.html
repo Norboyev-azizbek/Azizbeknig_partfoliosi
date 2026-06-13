@@ -1,0 +1,65 @@
+{% load static %}
+
+<div class="contact-container0">
+    <img src="{% static 'logo2.png' %}" alt="logo" class="logo2">
+    <div class="contact-container">
+        <h1>Men bilan bog'laning</h1>
+        <form action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            <label for="name">Ismingizni kiriting:</label><br>
+            <input type="text" name="name" id="name" placeholder="Ismingiz" required class="input" autocomplete="off"><br><br>
+            <label for="email">Emailingizni kiriting:</label><br>
+            <input type="email" name="email" id="email" placeholder="Emailingiz" required class="input" autocomplete="off"><br><br>
+            <label for="message">Xabaringizni kiriting:</label><br>
+            <textarea name="message" id="message" placeholder="Xabaringiz" required class="textarea"></textarea><br><br>
+            <button type="submit" class="btn">Yuborish</button>
+        </form>
+        
+        <!-- Contact Info Cards -->
+        <div class="contact-info-grid" style="margin-top: 30px;">
+            <div class="contact-info-card">
+                <div class="contact-info-icon">📧</div>
+                <h3>Email</h3>
+                <p class="ppp">norboyevazizbek54@gmail.com</p>
+            </div>
+            <div class="contact-info-card">
+                <div class="contact-info-icon">📱</div>
+                <h3>Telegram</h3>
+                <p>@azizbektech</p>
+            </div>
+            <div class="contact-info-card">
+                <div class="contact-info-icon">📍</div>
+                <h3>Manzil</h3>
+                <p>Jizzax viloyati Arnasoy tumani</p>
+            </div>
+            <div class="contact-info-card">
+                <div class="contact-info-icon">🕐</div>
+                <h3>Ish vaqti</h3>
+                <p>Dushanba - Juma<br>9:00 - 18:00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Django Messages -->
+{% if messages %}
+<div id="django-messages" style="display: none;">
+    {% for message in messages %}
+    <div class="message-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const messages = document.querySelectorAll('#django-messages div');
+        messages.forEach(msg => {
+            const type = msg.className.replace('message-', '');
+            const text = msg.textContent;
+            showToast(
+                type === 'success' ? 'Muvaffaqiyat' : 'Xatolik',
+                text,
+                type
+            );
+        });
+    });
+</script>
+{% endif %}

@@ -1,0 +1,83 @@
+{% load static %}
+
+<section class="projects-section">
+    <div class="section-title">
+        <h1>💻 Mening Loyihalarim</h1>
+        <p>Har bir loyiha - bu yangi tajriba va sifatli natija</p>
+    </div>
+
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">Barchasi</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="react">React</button>
+    </div>
+
+    <div class="projects-grid">
+        <!-- Potify.uz -->
+        <div class="project-card featured" data-category="web">
+            <div class="project-badge">Asosiy loyiha</div>
+            <div class="project-image">
+                <img src="{% static 'projects/potify.jpg' %}" alt="Potify.uz" loading="lazy">
+            </div>
+            <div class="project-content">
+                <h3>Potify.uz</h3>
+                <div class="project-text-wrapper">
+                    <p class="project-short-text">Portfolio yaratish platformasi. Professional faoliyatingizdagi barcha yutuqlaringizni jamlang.</p>
+                    <p class="project-full-text hidden">Ushbu platforma sizga o'z professional faoliyatingiz davomida erishgan barcha yutuqlaringiz va amalga oshirgan loyihalaringizni bitta mukammal portfolioda jamlab borish imkoniyatini beradi. Intuitiv interfeys, xavfsiz ma'lumotlar saqlash va professional ko'rinish.</p>
+                </div>
+                <button class="toggle-read-btn">Ko'proq ko'rsat</button>
+                <div class="tech-stack">
+                    <span>#HTML</span>
+                    <span>#CSS</span>
+                    <span>#JavaScript</span>
+                    <span>#Netlify</span>
+                </div>
+                <a href="https://potifyuz.netlify.app" target="_blank" class="project-link">Saytni ko'rish ➜</a>
+            </div>
+        </div>
+
+        <!-- E-Commerce Bot -->
+        <div class="project-card" data-category="python">
+            <div class="project-image">
+                <img src="{% static 'projects/ecommerce-bot.jpg' %}" alt="E-Commerce Bot" loading="lazy">
+            </div>
+            <div class="project-content">
+                <h3>E-Commerce Bot</h3>
+                <div class="project-text-wrapper">
+                    <p class="project-short-text">Telegram orqali avtomatlashtirilgan savdo boti.</p>
+                    <p class="project-full-text hidden">To'liq to'lov tizimi, admin panel, mahsulotlarni boshqarish va avtomatik javoblar funksiyalari mavjud. PostgreSQL bilan ishlaydi.</p>
+                </div>
+                <button class="toggle-read-btn">Ko'proq ko'rsat</button>
+                <div class="tech-stack">
+                    <span>#Python</span>
+                    <span>#Aiogram</span>
+                    <span>#PostgreSQL</span>
+                </div>
+                <a href="#" class="project-link">GitHub ➜</a>
+            </div>
+        </div>
+
+        <!-- Weather App -->
+        <div class="project-card" data-category="react">
+            <div class="project-badge">Yangi</div>
+            <div class="project-image">
+                <img src="{% static 'projects/weather.jpg' %}" alt="Weather App" loading="lazy">
+            </div>
+            <div class="project-content">
+                <h3>Weather App</h3>
+                <div class="project-text-wrapper">
+                    <p class="project-short-text">Real vaqt rejimidagi ob-havo ma'lumotlari.</p>
+                    <p class="project-full-text hidden">OpenWeatherMap API orqali ma'lumotlar. Shahar bo'yicha qidirish, 5 kunlik prognoz, harorat, namlik va shamol tezligi.</p>
+                </div>
+                <button class="toggle-read-btn">Ko'proq ko'rsat</button>
+                <div class="tech-stack">
+                    <span>#React</span>
+                    <span>#API</span>
+                    <span>#Axios</span>
+                </div>
+                <a href="#" class="project-link">Demo ➜</a>
+            </div>
+        </div>
+    </div>
+</section>
